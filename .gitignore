@@ -1,0 +1,23 @@
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Personal IELTS practice data and exported recordings
+ielts-oral-studio-*.json
+ielts-review-*.html
+*.webm
+*.wav
+*.mp3
+
+# Local secrets and logs
+.env
+.env.*
+*.log

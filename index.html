@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="面向雅思口语备考者的本地工作台：题库、答案、录音、复习日程与本地数据备份。" />
+  <title>口语练习台 · IELTS Speaking</title>
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,480;9..144,560&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@500;600&family=Outfit:wght@380;450;560&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-kicker">Local Studio</div>
+        <h1>口语练习台</h1>
+        <p>雅思口语备考工作台<br>题库 · 开口记录 · 遗忘曲线</p>
+      </div>
+      <nav class="nav">
+        <button data-view="home" onclick="navTo('home')"><span class="ic">⌂</span>今日口述台</button>
+        <button data-view="bank" class="active" onclick="navTo('bank')"><span class="ic">▦</span>题库墙</button>
+        <button data-view="practice" onclick="navTo('practice')"><span class="ic">✎</span>练习台</button>
+        <button data-view="review" onclick="navTo('review')"><span class="ic">↻</span>复习日程</button>
+        <button data-view="settings" onclick="navTo('settings')"><span class="ic">⚙</span>设置与备份</button>
+      </nav>
+      <div class="side-stat">
+        <div class="label">TODAY DUE</div>
+        <div class="num" id="side-due">0</div>
+        <div class="sub">到期题优先开口</div>
+      </div>
+    </aside>
+    <main class="main" id="main"></main>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="data.js"></script>
+  <script src="groups.js"></script>
+  <script src="lame.min.js"></script>
+  <script src="speech.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
